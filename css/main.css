@@ -1,2 +1,17 @@
 @charset "utf-8";
 
+#wrap {
+    width: 100vw;
+    height: 100vh;
+}
+
+#wrap header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+}
+
+#wrap header>.logo {
+    width: 20%;
+    background: url(../img/logo.png) no-repeat center center / 104px 32px;
+}
