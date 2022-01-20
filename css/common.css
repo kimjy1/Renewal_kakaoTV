@@ -3,6 +3,7 @@
 #wrap {
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 #wrap header {
@@ -14,6 +15,9 @@
     background: #000;
     color: #fff;
     font-weight: 500;
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 
 #wrap header>div {

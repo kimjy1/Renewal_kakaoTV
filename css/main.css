@@ -1,82 +1,125 @@
 @charset "utf-8";
 
-#videolist {
-    width: 100%;
-    height: 2500px;
-    /* background: purple; */
+/* 전체 비디오 컨테이너 */
+#videolist-container {
+    width: 95%;
+    height: 4500px;
     display: flex;
+    flex-flow: row nowrap;
+    padding-top: 120px;
+    margin-left: 5%;
 }
 
-#videolist>div[class*=original] {
+/* 왼쪽 섹션 컨테이너 시작 */
+#videolist-container>section[class*=section_left] {
     width: 50%;
-    height: 2000px;
+    height: 4300px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin-left: 10%;
+    flex-flow: column nowrap;
+    background: yellow;
 }
 
-#videolist>div[class*=original]>h2 {
-    width: 100%;
+/* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 시작 */
+#videolist-container>section[class*=section_left]>div[class*=original-container] {
+    width: 50%;
+    height: 1500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    gap: 50px;
+    background: purple;
+}
+
+#videolist-container>section[class*=section_left]>div[class*=original-container]>h2 {
+    width: 98%;
     height: 120px;
     font-size: 2.3em;
     padding-top: 80px;
 }
 
-#videolist>div[class*=original]>div[class*=todayvideo] {
-    width: 60%;
-    height: 300px;
+/* 왼쪽 섹션 - 인기 오리지널 비디오&텍스트 컨테이너 */
+#videolist-container>section[class*=section_left]>div[class*=original-container]>div[class*=original-list] {
+    width: 240px;
+    height: 240px;
+}
+
+/* 왼쪽 섹션 - 인기 오리지널 비디오 */
+#videolist-container>section[class*=section_left]>div[class*=original-container]>div[class*=original-list]>div[class*=original] {
+    width: 240px;
+    height: 140px;
     background: #f7f7f7;
-    box-shadow: 0 1px 20px 3px #d7dbe0;
     position: relative;
 }
 
-#videolist>div[class*=original]>div[class*=title] {
-    width: 30%;
-    height: 150px;
-    background: green;
+/* 왼쪽 섹션 - 인기 오리지널 텍스트 */
+#videolist-container>section[class*=section_left]>div[class*=original-container]>div[class*=original-list]>div[class*=title] {
+    width: 240px;
+    height: 100px;
+    background: skyblue;
+}
+/* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 끝 */
+
+/* 왼쪽 섹션 - 셀럽들의 라이프스타일 컨테이너 스타일 시작 */
+#videolist-container>div[class*=popularvideo1-container] {
+    width: 50%;
+    height: 1500px;
+    background: grey;
 }
 
-#videolist>div[class*=original]>div[class*=todayvideo]>span {
-    padding: 5px 10px;
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    border-radius: 3px;
+#videolist-container>div[class*=popularvideo1-container]>div[class*="popularvideo1-list"] {
+    width: 240px;
+    height: 240px;
+    background: purple;
 }
+/* 왼쪽 섹션 컨테이너 끝 */
 
-#videolist>div[class*=livelist] {
+/* 오른쪽 섹션 컨테이너 시작 */
+#videolist-container>section[class*=section_right] {
     width: 40%;
-    height: 2000px;
+    height: 4300px;
+    display: flex;
+    flex-flow: column nowrap;
+    background: #eee;
+}
+
+/* 오른쪽 섹션 - 인기 라이브 컨테이너 스타일 시작 */
+#videolist-container>section[class*=section_right]>div[class*=livelist] {
+    width: 50%;
+    height: 4000px;
     background: #eee;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
 }
 
-#videolist>div[class*=livelist]>h2 {
+#videolist-container>section[class*=section_right]>div[class*=livelist]>h2 {
     width: 100%;
     font-size: 1.7em;
 }
 
-#videolist>div[class*=livelist]>div[class*=livebox] {
-    width: 30%;
+/* 오른쪽 섹션 - 인기 라이브 비디오&텍스트 박스 */
+#videolist-container>section[class*=section_right]>div[class*=livelist]>div[class*=livebox] {
+    width: 70%;
     height: 300px;
-    background: orange;
     display: flex;
     flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    background: orange;
 }
 
-#videolist>div[class*=livelist]>div[class*=livebox]>div[class*=livevideo] {
+/* 오른쪽 섹션 - 인기 라이브 비디오 */
+#videolist-container>div[class*=livelist]>div[class*=livebox]>div[class*=livevideo] {
     width: 40%;
-    height: 100px;
+    height: 140px;
     background: pink;
 }
 
-#videolist>div[class*=livelist]>div[class*=livebox]>div[class*=title] {
-    width: 30%;
+/* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
+#videolist-container>div[class*=livelist]>div[class*=livebox]>div[class*=title] {
+    width: 40%;
     height: 100px;
     background: yellow;
 }
+
+/* 섹션 - 인기 라이브 컨테이너 스타일 끝 */
