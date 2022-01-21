@@ -24,29 +24,44 @@
     height: 50px;
 }
 
-#wrap header div[class*=logo] {
+#wrap header>div[class*=logo] {
     width: 6%;
     background: url(../img/logo.png) no-repeat center center / 110px 32px;
     cursor: pointer;
 }
 
-#wrap header div[class*=headericon] {
+#wrap header>div[class*=headericon] {
     width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#wrap header div[class*=headericon] span:nth-of-type(4) {
+#wrap header>div[class*=headericon] span {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#wrap header>div[class*=headericon] span:nth-of-type(1) {
+    background: url(../img/search.png) no-repeat right center / 24px 24px;
+    width: 56px;
+    height: 18px;
+}
+
+#wrap header>div[class*=headericon] span:nth-of-type(4) {
     padding: 1% 1.5%;
     border-radius: 5px;
     background: #fee500;
     color: #000;
 }
 
-#wrap header .nav {
+#wrap header>.nav {
     width: 80%;
     height: 25px;
     display: flex;
     justify-content: space-evenly;
+}
+
+#wrap header>.nav li {
+    cursor: pointer;
 }

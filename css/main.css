@@ -43,9 +43,9 @@
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 비디오 */
-#videolist-container>section[class*=section_left]>div[class*=original-container]>div[class*=original-list]>div[class*=original] {
-    width: 240px;
-    height: 140px;
+#videolist-container>section[class*=section_left]>div[class*=original-container]>div[class*=original-list]>div[class*=originalvideo] {
+    width: 138px;
+    height: 78px;
     background: #f7f7f7;
     position: relative;
 }
@@ -112,15 +112,15 @@
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
-#videolist-container>div[class*=livelist]>div[class*=livebox]>div[class*=livevideo] {
-    width: 40%;
+#videolist-container>section[class*=section_right]>div[class*=livelist]>div[class*=livebox]>div[class*=livevideo] {
+    width: 75%;
     height: 140px;
     background: pink;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
-#videolist-container>div[class*=livelist]>div[class*=livebox]>div[class*=title] {
-    width: 40%;
+#videolist-container>section[class*=section_right]>div[class*=livelist]>div[class*=livebox]>div[class*=title] {
+    width: 75%;
     height: 100px;
     background: yellow;
 }
