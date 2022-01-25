@@ -21,7 +21,6 @@ $.ajax({
 })
 
   .done(function (dl) {
-    alert("카카오쇼핑 데이터 받기 완료")
     console.log(dl.documents[0].collection);
     console.log(dl.documents[0].thumbnail_url);
     console.log(dl.documents[0].image_url);
