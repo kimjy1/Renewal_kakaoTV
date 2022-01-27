@@ -6,13 +6,13 @@
   height: 4500px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   padding-top: 120px;
 }
 
 /* 왼쪽 섹션 컨테이너 시작 */
 #videolist-container > section[class*="section_left"] {
-  width: 60%;
+  width: 50%;
   height: 1500px;
   display: flex;
   flex-flow: column nowrap;
@@ -131,7 +131,7 @@
 
 /* 오른쪽 섹션 컨테이너 시작 */
 #videolist-container > section[class*="section_right"] {
-  width: 20%;
+  width: 40%;
   height: 820px;
   /*display: flex;
   flex-flow: column nowrap;
@@ -183,7 +183,7 @@
   > section[class*="section_right"]
   > div[class*="livelist-container"]
   > div[class*="livebox"] {
-  width: 100%;
+  width: 80%;
   height: 600px;
   display: flex;
   flex-flow: column wrap;
@@ -200,6 +200,15 @@
   width: 80%;
   height: 500px;
   background: pink;
+}
+
+#videolist-container
+  > section[class*="section_right"]
+  > div[class*="livelist-container"]
+  > div[class*="livebox"]
+  > div[class*="livevideo"]
+  img {
+  width: 500px;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
