@@ -11,7 +11,7 @@
 }
 
 /* 왼쪽 섹션 컨테이너 시작 */
-#videolist-container > section[class*="section_left"] {
+.section_left {
   width: 50%;
   height: 1500px;
   display: flex;
@@ -20,65 +20,48 @@
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 시작 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="original-container"] {
+.section_left .original-container {
   width: 100%;
-  height: 800px;
+  height: 900px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  /* background: purple; */
 }
 
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="original-container"]
-  > h2 {
+.original-container > h2 {
   width: 95%;
   height: 120px;
   font-size: 2.3em;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 비디오&텍스트 컨테이너 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="original-container"]
-  > div[class*="original-list"] {
-  width: 17%;
+.original-container .original-list {
+  width: 30%;
   height: 200px;
-  /* background: tomato; */
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 비디오 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="original-container"]
-  > div[class*="original-list"]
-  > div[class*="originalvideo"] {
+.original-list .originalvideo {
   width: 100%;
   height: 78px;
   position: relative;
-  /* background: purple; */
+}
+
+.original-list .originalvideo img {
+  width: 100%;
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 텍스트 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="original-container"]
-  > div[class*="original-list"]
-  > div[class*="title"] {
+.original-list .title {
   width: 100%;
-  height: 80px;
+  height: 130px;
   background: skyblue;
 }
 /* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 끝 */
 
 /* 왼쪽 섹션 - 셀럽들의 라이프스타일 컨테이너 스타일 시작 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="popularvideo1-container"] {
+.section_left .popularvideo1-container {
   width: 100%;
   height: 600px;
   display: flex;
@@ -88,41 +71,27 @@
   background: grey;
 }
 
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="popularvideo1-container"]
-  > h2 {
+.popularvideo1-container > h2 {
   width: 100%;
   height: 50px;
 }
 
 /* 왼쪽 섹션 - 셀럽들의 라이프스타일 비디오&텍스트 컨테이너 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="popularvideo1-container"]
-  > div[class*="popularvideo1-list"] {
+.popularvideo1-container .popularvideo1-list {
   width: 20%;
   height: 240px;
   background: purple;
 }
 
 /* 왼쪽 섹션 - 셀럽들의 라이프스타일 비디오 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="popularvideo1-container"]
-  > div[class*="popularvideo1-list"]
-  > div[class*="popularvideo"] {
+.popularvideo1-list .popularvideo {
   width: 80%;
   height: 78px;
   background: red;
 }
 
 /* 왼쪽 섹션 - 셀럽들의 라이프스타일 텍스트 */
-#videolist-container
-  > section[class*="section_left"]
-  > div[class*="popularvideo1-container"]
-  > div[class*="popularvideo1-list"]
-  > div[class*="title"] {
+.popularvideo1-list .title {
   width: 80%;
   height: 100px;
   background: green;
@@ -130,7 +99,7 @@
 /* 왼쪽 섹션 컨테이너 끝 */
 
 /* 오른쪽 섹션 컨테이너 시작 */
-#videolist-container > section[class*="section_right"] {
+#videolist-container .section_right {
   width: 40%;
   height: 820px;
   /*display: flex;
@@ -144,47 +113,34 @@
   top: 120px;
 }
 
-#videolist-container
-  > section[class*="section_right"]::-webkit-scrollbar-thumb {
+/* 오른쪽 섹션 컨테이너 스크롤바 */
+#videolist-container .section_right::-webkit-scrollbar-thumb {
   visibility: hidden;
 }
 
-/* #videolist-container
-  > section[class*="section_right"]:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
-} */
-
 /* 오른쪽 섹션 - 인기 라이브 컨테이너 스타일 시작 */
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"] {
+.section_right .livelist-container {
   width: 100%;
   height: 5000px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
   gap: 50px 0;
+  /* justify-content: flex-start; */
   /* align-content: flex-start; */
   /* background: #eee; */
 }
 
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"]
-  > h2 {
+.livelist-container > h2 {
   line-height: 80px;
   font-size: 1.7em;
-  padding: 2.5% 0;
+  padding-right: 20%;
   text-align: center;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오&텍스트 박스 */
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"]
-  > div[class*="livebox"] {
+.livelist-container .livebox {
   width: 80%;
-  height: 600px;
+  height: 390px;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
@@ -192,31 +148,18 @@
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"]
-  > div[class*="livebox"]
-  > div[class*="livevideo"] {
+.livebox .livevideo {
   width: 80%;
-  height: 500px;
+  height: 280px;
   background: pink;
 }
 
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"]
-  > div[class*="livebox"]
-  > div[class*="livevideo"]
-  img {
-  width: 500px;
+.livebox .livevideo img {
+  width: 100%;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
-#videolist-container
-  > section[class*="section_right"]
-  > div[class*="livelist-container"]
-  > div[class*="livebox"]
-  > div[class*="title"] {
+.livebox .title {
   width: 80%;
   height: 100px;
   background: yellow;

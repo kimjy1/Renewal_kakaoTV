@@ -4,6 +4,7 @@
   width: 8px; /*스크롤바의 너비*/
 }
 ::-webkit-scrollbar-thumb {
+  border-radius: 8px;
   background-color: #666; /*스크롤바의 색상*/
 }
 ::-webkit-scrollbar-track {
@@ -38,7 +39,7 @@
 
 /* 헤더 - 로고 */
 #wrap header > div[class*="logo"] {
-  width: 6%;
+  width: 110px;
   background: url(../img/logo.png) no-repeat center center / 110px 32px;
   cursor: pointer;
 }
