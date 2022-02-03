@@ -38,13 +38,13 @@
 /* 왼쪽 섹션 - 인기 오리지널 비디오&텍스트 컨테이너 */
 .original-container .original-list {
   width: 30%;
-  height: 200px;
+  height: 220px;
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 비디오 */
 .original-list .originalvideo {
   width: 100%;
-  height: 78px;
+  height: 165px;
   position: relative;
 }
 
@@ -55,7 +55,7 @@
 /* 왼쪽 섹션 - 인기 오리지널 텍스트 */
 .original-list .title {
   width: 100%;
-  height: 130px;
+  height: 50px;
   background: skyblue;
 }
 /* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 끝 */
@@ -102,11 +102,6 @@
 #videolist-container .section_right {
   width: 40%;
   height: 820px;
-  /*display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  background: #eee; */
   overflow-x: hidden;
   overflow-y: scroll;
   position: sticky;
@@ -121,46 +116,49 @@
 /* 오른쪽 섹션 - 인기 라이브 컨테이너 스타일 시작 */
 .section_right .livelist-container {
   width: 100%;
-  height: 5000px;
+  height: 7000px;
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   gap: 50px 0;
-  /* justify-content: flex-start; */
-  /* align-content: flex-start; */
-  /* background: #eee; */
 }
 
 .livelist-container > h2 {
   line-height: 80px;
   font-size: 1.7em;
-  padding-right: 20%;
   text-align: center;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오&텍스트 박스 */
 .livelist-container .livebox {
-  width: 80%;
-  height: 390px;
+  width: 450px;
+  height: 1000px;
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
   align-content: center;
-  background: orange;
+  background: #000;
+  border-radius: 20px;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
 .livebox .livevideo {
-  width: 80%;
-  height: 280px;
-  background: pink;
+  width: 100%;
 }
 
 .livebox .livevideo img {
   width: 100%;
+  /* width: 300px;
+  height: 300px; */
 }
+
+/* .livelist-container .livebox:nth-of-type(2) {
+  height: 860px;
+} */
 
 /* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
 .livebox .title {
-  width: 80%;
+  width: 100%;
   height: 100px;
   background: yellow;
 }
