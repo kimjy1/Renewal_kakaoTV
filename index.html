@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="_csrf" th:content="${_csrf.token}" />
-    <meta name="_csrf_header" th:content="${_csrf.headerName}" />
     <title>Main Page</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
@@ -25,12 +23,12 @@
       <!-- 헤더 -->
       <header>
         <div class="logo"></div>
-        <div class="headericon">
-          <a href="#"><span>검색</span></a>
-          <a href="#"><span>업로드</span></a>
-          <a href="#"><span>방송하기</span></a>
-          <a href="#"><span>로그인</span></a>
-        </div>
+        <nav class="menu-container">
+          <button type="button">검색</button>
+          <a href="#">업로드</a>
+          <a href="#">방송하기</a>
+          <a href="#">로그인</a>
+        </nav>
         <ul class="nav">
           <li>인기 오리지널</li>
           <li>셀럽들의 라이프스타일</li>
