@@ -41,55 +41,40 @@ $.ajax({
   });
 
 
-// 오른쪽 섹션 - 인기 라이브 비디오1
+// 오른쪽 섹션 - 인기 라이브 비디오
 $.ajax({
   method: "GET",
   url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "유튜브 shorts", page: 1 },
+  data: { query: "#쇼츠", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
   // dl.documents[0].image_url 이미지 URL
+  // dl.documents[0].display_sitename 출처
   // dl.documents[0].width 이미지의 가로 길이
   // dl.documents[0].height 이미지의 세로 길이
 
   .done(function (dl) {
-    $(".livevideo").eq(0).append("<a href='#'>" + "<img src='" + dl.documents[38].image_url + "'/>" + "</a>");
-
-    $(".livevideo").eq(1).append("<a href='#'>" + "<img src='" + dl.documents[71].image_url + "'/>" + "</a>");
-
-    for (let i = 0; i < 12; i++) {
-      $(".livevideo .title").eq(i).append("<p>" + dl.documents[i].title + "</p>");
+    let imageindex = 0;
+    for (let i = 65; i < 73; i++) {
+      $(".livevideo").eq(imageindex).append("<a href='#'>" + "<img src='" + dl.documents[i].image_url + "'/>" + "</a>");
+      $(".livebox .title").eq(imageindex).append("<p>" + dl.documents[i].display_sitename + "</p>");
+      imageindex++;
     }
   });
 
-// 오른쪽 섹션 - 인기 라이브 비디오2
+// 오른쪽 섹션 - 인기 라이브 비디오
 $.ajax({
   method: "GET",
   url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "일소라", page: 1 },
+  data: { query: "유튜브 쇼츠", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
   // dl.documents[0].image_url 이미지 URL
+  // dl.documents[0].display_sitename 출처
   // dl.documents[0].width 이미지의 가로 길이
   // dl.documents[0].height 이미지의 세로 길이
 
   .done(function (dl) {
-    $(".livevideo").eq(2).append("<a href='#'>" + "<img src='" + dl.documents[67].image_url + "'/>" + "</a>");
-
-    $(".livevideo").eq(3).append("<a href='#'>" + "<img src='" + dl.documents[75].image_url + "'/>" + "</a>");
-  });
-
-// 오른쪽 섹션 - 인기 라이브 비디오3
-$.ajax({
-  method: "GET",
-  url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "세로 비디오", page: 1 },
-  headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
-})
-  // dl.documents[0].image_url 이미지 URL
-  // dl.documents[0].width 이미지의 가로 길이
-  // dl.documents[0].height 이미지의 세로 길이
-
-  .done(function (dl) {
-    $(".livevideo").eq(4).append("<a href='#'>" + "<img src='" + dl.documents[21].image_url + "'/>" + "</a>");
+    let mainimg = 7;
+    $(".portrait-title").eq(0).append("<a href='#'>" + "<img src='" + dl.documents[mainimg].image_url + "'/>" + "</a>");
   });

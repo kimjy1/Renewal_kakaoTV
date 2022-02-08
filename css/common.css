@@ -37,7 +37,7 @@ header {
   z-index: 9;
 }
 
-header :where(.logo, .menu-container) {
+header :where(.logo, .menu-container, .list-group) {
   height: 50px;
 }
 
@@ -51,12 +51,16 @@ header > .logo {
 /* 헤더 - 아이콘 컨테이너 */
 header > .menu-container {
   width: 40%;
+}
+
+.menu-container .list-group {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-header > .menu-container a:not(:nth-of-type(4)) {
+.list-group li a {
   display: inline-block;
   width: 56px;
   height: 18px;
@@ -68,7 +72,8 @@ header > .menu-container button {
   background: url(../img/search.png) no-repeat right center / 24px 24px;
 }
 
-header > .menu-container a:nth-of-type(4) {
+header > .menu-container a:nth-of-type(3) {
+  box-sizing: content-box;
   padding: 1% 1.5%;
   border-radius: 5px;
   background: #fee500;
@@ -76,13 +81,13 @@ header > .menu-container a:nth-of-type(4) {
   text-align: center;
 }
 
-header > .nav {
+header > .anchor-container {
   width: 80%;
   height: 25px;
   display: flex;
   justify-content: space-evenly;
 }
 
-header > .nav li {
+header > .anchor-container li {
   cursor: pointer;
 }

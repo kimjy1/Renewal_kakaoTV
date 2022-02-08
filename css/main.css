@@ -37,7 +37,7 @@
 
 /* 왼쪽 섹션 - 인기 오리지널 비디오&텍스트 컨테이너 */
 .original-container .original-list {
-  width: 30%;
+  width: 280px;
   height: 220px;
 }
 
@@ -123,15 +123,17 @@
   gap: 50px 0;
 }
 
-.livelist-container > h2 {
-  line-height: 80px;
-  font-size: 1.7em;
-  text-align: center;
+.livelist-container .portrait-title {
+  width: 400px;
+}
+
+.portrait-title a img {
+  width: 100%;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오&텍스트 박스 */
 .livelist-container .livebox {
-  width: 450px;
+  width: 320px;
   height: 1000px;
   display: flex;
   flex-flow: column wrap;
@@ -144,19 +146,12 @@
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
 .livebox .livevideo {
   width: 100%;
-  overflow: hidden;
 }
 
-.livebox .livevideo img {
+.livevideo img {
   width: 100%;
-  background: yellowgreen;
-  /* width: 300px;
-  height: 300px; */
+  border-radius: 10px;
 }
-
-/* .livelist-container .livebox:nth-of-type(2) {
-  height: 860px;
-} */
 
 /* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
 .livebox .title {
