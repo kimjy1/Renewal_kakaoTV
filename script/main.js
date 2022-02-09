@@ -61,20 +61,3 @@ $.ajax({
       imageindex++;
     }
   });
-
-// 오른쪽 섹션 - 인기 라이브 비디오
-$.ajax({
-  method: "GET",
-  url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "유튜브 쇼츠", page: 1 },
-  headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
-})
-  // dl.documents[0].image_url 이미지 URL
-  // dl.documents[0].display_sitename 출처
-  // dl.documents[0].width 이미지의 가로 길이
-  // dl.documents[0].height 이미지의 세로 길이
-
-  .done(function (dl) {
-    let mainimg = 7;
-    $(".portrait-title").eq(0).append("<a href='#'>" + "<img src='" + dl.documents[mainimg].image_url + "'/>" + "</a>");
-  });

@@ -56,7 +56,7 @@ header > .menu-container {
 .menu-container .list-group {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -67,14 +67,15 @@ header > .menu-container {
   cursor: pointer;
 }
 
-header > .menu-container button {
+.list-group li > button {
   width: 56px;
   background: url(../img/search.png) no-repeat right center / 24px 24px;
 }
 
-header > .menu-container a:nth-of-type(3) {
-  box-sizing: content-box;
-  padding: 1% 1.5%;
+.list-group li:nth-of-type(4) a {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
   border-radius: 5px;
   background: #fee500;
   color: #000;
