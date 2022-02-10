@@ -44,6 +44,7 @@ $.ajax({
 // 오른쪽 섹션 - 인기 라이브 비디오
 $.ajax({
   method: "GET",
+  contentType: "application/json; charset=UTF-8",
   url: "https://dapi.kakao.com/v2/search/image",
   data: { query: "#쇼츠", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
