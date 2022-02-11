@@ -20,7 +20,6 @@ $.ajax({
 
   .done(function (dl) {
     $(".originalvideo").eq(1).append("<a href='#'>" + "<img src='" + dl.documents[53].image_url + "'/>" + "</a>");
-    $(".original-list .title").eq(1).append("<p>" + dl.documents[53].display_sitename + "</p>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 3
@@ -33,7 +32,6 @@ $.ajax({
 })
   .done(function (dl) {
     $(".originalvideo").eq(2).append("<a href='#'>" + "<img src='" + dl.documents[0].image_url + "'/>" + "</a>");
-    $(".original-list .title").eq(2).append("<p>" + dl.documents[0].display_sitename + "</p>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 4
@@ -46,7 +44,6 @@ $.ajax({
 })
   .done(function (dl) {
     $(".originalvideo").eq(3).append("<a href='#'>" + "<img src='" + dl.documents[24].image_url + "'/>" + "</a>");
-    $(".original-list .title").eq(3).append("<p>" + dl.documents[24].display_sitename + "</p>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 5~7
@@ -62,7 +59,6 @@ $.ajax({
     let imageindex = 4;
     for (let i = 11; i < 13; i++) {
       $(".originalvideo").eq(imageindex).append("<a href='#'>" + "<img src='" + dl.documents[i].image_url + "'/>" + "</a>");
-      $(".original-list .title").eq(imageindex).append("<p>" + dl.documents[i].display_sitename + "</p>");
       imageindex++;
     }
     $(".originalvideo").eq(imageindex).append("<a href='#'>" + "<img src='" + dl.documents[14].image_url + "'/>" + "</a>");
@@ -93,7 +89,6 @@ $.ajax({
 
   .done(function (dl) {
     $(".originalvideo").eq(8).append("<a href='#'>" + "<img src='" + dl.documents[21].image_url + "'/>" + "</a>");
-    $(".original-list .title > p").eq(8).append(dl.documents[21].display_sitename);
   });
 
 // // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 9
