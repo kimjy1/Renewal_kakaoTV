@@ -141,6 +141,7 @@
   align-content: center;
   background: #000;
   border-radius: 20px;
+  position: relative;
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
@@ -148,15 +149,47 @@
   width: 100%;
 }
 
-.livevideo img {
-  width: 100%;
-  border-radius: 10px;
+.livebox .livevideo iframe {
+  border-radius: 20px;
 }
 
-/* 오른쪽 섹션 - 인기 라이브 텍스트 박스 */
-.livebox .title {
-  width: 100%;
-  height: 100px;
-  background: yellow;
+.livebox > .menuContainer {
+  width: 40px;
+  height: 200px;
+  position: absolute;
+  right: -50px;
+  bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  /* background: yellow; */
+}
+
+.livebox > .menuContainer button {
+  width: 32px;
+  height: 32px;
+  background: no-repeat top center / 32px 32px;
+}
+
+.livebox > .menuContainer button:nth-of-type(1) {
+  background-image: url(../img/like.png);
+}
+
+/* .menuContainer button:nth-of-type(1)::after {
+  content: "164";
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+  line-height: 70px;
+} */
+
+.livebox > .menuContainer button:nth-of-type(2) {
+  background-image: url(../img/comment.png);
+  background-size: 24px 24px;
+}
+
+.livebox > .menuContainer button:nth-of-type(3) {
+  background-image: url(../img/share.png);
 }
 /* 섹션 - 인기 라이브 컨테이너 스타일 끝 */
