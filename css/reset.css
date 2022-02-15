@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,12 +18,16 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
+}
+
+/* 버튼 기본 설정 */
+button {
+  all: unset;
 }
 
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  font-size: 0.85em;
+  font-size: 0.9em;
   font-family: "Gothic A1", sans-serif;
 }

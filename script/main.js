@@ -14,12 +14,12 @@ $.ajax({
 $.ajax({
   method: "GET",
   url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "며느라기2", page: 1 },
+  data: { query: "며느라기2", page: 2 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
 
   .done(function (dl) {
-    $(".originalvideo").eq(1).append("<a href='#'>" + "<img src='" + dl.documents[54].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(1).append("<a href='#'>" + "<img src='" + dl.documents[24].image_url + "'/>" + "</a>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 3
@@ -56,7 +56,7 @@ $.ajax({
 })
 
   .done(function (dl) {
-    $(".originalvideo").eq(4).append("<a href='#'>" + "<img src='" + dl.documents[70].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(4).append("<a href='#'>" + "<img src='" + dl.documents[55].image_url + "'/>" + "</a>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 6~7
@@ -101,3 +101,7 @@ $.ajax({
   .done(function (dl) {
     $(".originalvideo").eq(8).append("<a href='#'>" + "<img src='" + dl.documents[21].image_url + "'/>" + "</a>");
   });
+
+  // document.querySelector(".ytp-button").addEventListener("click", () => {
+
+  // });

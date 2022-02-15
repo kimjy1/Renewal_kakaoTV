@@ -55,8 +55,23 @@
 /* 왼쪽 섹션 - 인기 오리지널 텍스트 */
 .original-list .title {
   width: 100%;
-  height: 50px;
-  background: skyblue;
+  height: 60px;
+}
+
+.original-list .title p {
+  font-weight: bold;
+}
+
+.original-list .title p:last-child {
+  font-size: 0.8em;
+  color: #848c9c;
+  font-weight: 500;
+}
+
+.original-list:nth-of-type(3) .title p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 끝 */
 
