@@ -5,21 +5,22 @@ $.ajax({
   data: { query: "런웨이2 썸네일" },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
-
+  // dl.documents[0].image_url 이미지 URL
+  // dl.documents[0].display_sitename 출처
   .done(function (dl) {
-    $(".originalvideo").eq(0).append("<a href='#'>" + "<img src='" + dl.documents[2].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(0).append("<img src='" + dl.documents[2].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 2
 $.ajax({
   method: "GET",
   url: "https://dapi.kakao.com/v2/search/image",
-  data: { query: "며느라기2", page: 2 },
+  data: { query: "며느라기2", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
 
   .done(function (dl) {
-    $(".originalvideo").eq(1).append("<a href='#'>" + "<img src='" + dl.documents[24].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(1).append("<img src='" + dl.documents[54].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 3
@@ -31,7 +32,7 @@ $.ajax({
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
   .done(function (dl) {
-    $(".originalvideo").eq(2).append("<a href='#'>" + "<img src='" + dl.documents[0].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(2).append("<img src='" + dl.documents[0].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 4
@@ -43,7 +44,7 @@ $.ajax({
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
   .done(function (dl) {
-    $(".originalvideo").eq(3).append("<a href='#'>" + "<img src='" + dl.documents[24].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(3).append("<img src='" + dl.documents[24].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 5
@@ -56,7 +57,7 @@ $.ajax({
 })
 
   .done(function (dl) {
-    $(".originalvideo").eq(4).append("<a href='#'>" + "<img src='" + dl.documents[55].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(4).append("<img src='" + dl.documents[55].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 6~7
@@ -67,11 +68,9 @@ $.ajax({
   data: { query: "카카오티비 파이트클럽", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
-  // dl.documents[0].image_url 이미지 URL
-  // dl.documents[0].display_sitename 출처
   .done(function (dl) {
-    $(".originalvideo").eq(5).append("<a href='#'>" + "<img src='" + dl.documents[19].image_url + "'/>" + "</a>");
-    $(".originalvideo").eq(6).append("<a href='#'>" + "<img src='" + dl.documents[25].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(5).append("<img src='" + dl.documents[13].image_url + "'/>");
+    $(".originalvideo").eq(6).append("<img src='" + dl.documents[30].image_url + "'/>");
   });
 
 // 왼쪽 섹션 - 인기 오리지널 비디오 이미지 8
@@ -82,10 +81,8 @@ $.ajax({
   data: { query: "카카오티비 개미는 오늘도 뚠뚠", page: 1 },
   headers: { Authorization: "KakaoAK 71d24c50e0b18ae03087bb26977587bc" }
 })
-  // dl.documents[0].image_url 이미지 URL
-  // dl.documents[0].display_sitename 출처
   .done(function (dl) {
-    $(".originalvideo").eq(7).append("<a href='#'>" + "<img src='" + dl.documents[11].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(7).append("<img src='" + dl.documents[11].image_url + "'/>");
   });
 
 
@@ -99,9 +96,9 @@ $.ajax({
 })
 
   .done(function (dl) {
-    $(".originalvideo").eq(8).append("<a href='#'>" + "<img src='" + dl.documents[21].image_url + "'/>" + "</a>");
+    $(".originalvideo").eq(8).append("<img src='" + dl.documents[21].image_url + "'/>");
   });
 
-  // document.querySelector(".ytp-button").addEventListener("click", () => {
+// document.querySelector("iframe").addEventListener("click", () => {
 
-  // });
+// });

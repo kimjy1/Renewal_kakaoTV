@@ -1,11 +1,15 @@
 @charset "utf-8";
 
+.menuContainer button {
+  cursor: pointer;
+}
+
 /* 전체 비디오 컨테이너 */
 #videolist-container {
   width: 100%;
   height: 4500px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-end;
   padding-top: 120px;
 }
@@ -53,25 +57,23 @@
 }
 
 /* 왼쪽 섹션 - 인기 오리지널 텍스트 */
-.original-list .title {
+.original-list .videotitle {
   width: 100%;
   height: 60px;
 }
 
-.original-list .title p {
-  font-weight: bold;
+.original-list .videotitle h4 {
+  margin: 0 0 1.5% 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.original-list .title p:last-child {
+.original-list .videotitle span {
   font-size: 0.8em;
   color: #848c9c;
   font-weight: 500;
-}
-
-.original-list:nth-of-type(3) .title p {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 /* 왼쪽 섹션 - 인기 오리지널 컨테이너 스타일 끝 */
 
@@ -106,7 +108,7 @@
 }
 
 /* 왼쪽 섹션 - 셀럽들의 라이프스타일 텍스트 */
-.popularvideo1-list .title {
+.popularvideo1-list .videotitle {
   width: 80%;
   height: 100px;
   background: green;
@@ -148,7 +150,7 @@
 
 /* 오른쪽 섹션 - 인기 라이브 비디오&텍스트 박스 */
 .livelist-container .livebox {
-  width: 400px;
+  width: 48%;
   height: 650px;
   display: flex;
   flex-flow: column wrap;
@@ -160,11 +162,7 @@
 }
 
 /* 오른쪽 섹션 - 인기 라이브 비디오 */
-.livebox .livevideo {
-  width: 100%;
-}
-
-.livebox .livevideo iframe {
+.livebox iframe {
   border-radius: 20px;
 }
 
@@ -182,22 +180,15 @@
 }
 
 .livebox > .menuContainer button {
+  display: inline-block;
   width: 32px;
   height: 32px;
-  background: no-repeat top center / 32px 32px;
+  background: no-repeat center center / 32px 32px;
 }
 
 .livebox > .menuContainer button:nth-of-type(1) {
   background-image: url(../img/like.png);
 }
-
-/* .menuContainer button:nth-of-type(1)::after {
-  content: "164";
-  display: inline-block;
-  width: 32px;
-  text-align: center;
-  line-height: 70px;
-} */
 
 .livebox > .menuContainer button:nth-of-type(2) {
   background-image: url(../img/comment.png);
@@ -208,3 +199,13 @@
   background-image: url(../img/share.png);
 }
 /* 섹션 - 인기 라이브 컨테이너 스타일 끝 */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section_left {
+    width: 100%;
+  }
+
+  .section_right {
+    transform: translateX(100%);
+  }
+}
